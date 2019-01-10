@@ -12,9 +12,10 @@ namespace SupportTool.Models.ClientInfo
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Column("ClientID")]
         public Clients ClientID { get; set; }
 
-        // example: ('BOE CMC URL', 'http://aopaboe.personifycloud.com/BOE/CMC', 'BOEadmin', '@dmin123')
+        // example: ('BOE CMC URL', 'http://BOE/CMC', 'username', 'password')
 
         [Required]
         public string EnvTitle { get; set; }
