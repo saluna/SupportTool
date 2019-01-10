@@ -1,6 +1,6 @@
 ﻿
 @using SupportTool.Models.ClientInfo
-@model List<SupportTool.Models.ClientInfo.Clients>
+@model List<SupportTool.Models.ClientInfo.ClientDetails>
 
 
 @{
@@ -8,6 +8,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>This is a test details page</h2>
-
+<h2>Client Connectivity</h2>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Detail</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var currClients in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(currClients.envTitle, "Details", "Clients", new {id = currClients.Clients}, null)</td>
+            <td>@Html.ActionLink(currClients.envDetails, "Details", "Clients", new {id = currClients.Clients}, null)</td>
+            <td>@Html.ActionLink(currClients.envUsername, "Details", "Clients", new {id = currClients.Clients}, null)</td>
+            <td>@Html.ActionLink(currClients.envPassword, "Details", "Clients", new {id = currClients.Clients}, null)</td>
+        </tr>
+    }
+    </tbody>
+</table>
 

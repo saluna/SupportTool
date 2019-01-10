@@ -26,11 +26,11 @@ namespace SupportTool.Models.ClientInfo
 
         // 1 = hosted, 0 = premise
         [Required]
-        public byte Hosted { get; set; }
+        public bool Hosted { get; set; }
 
         // 1 = has Pgo, 0 = does not have Pgo
         [Required]
-        public byte PGo { get; set; }
+        public bool PGo { get; set; }
     }
 
     public class ClientsDbContext : DbContext

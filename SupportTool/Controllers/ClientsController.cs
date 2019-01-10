@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -36,10 +37,18 @@ namespace SupportTool.Controllers
         // GET: Clients/Details
         public ActionResult Details(string ClientID)
         {
+            // get the connectivity information for client selected
+            var currClient = _context.ClientDetails.ToList();
 
-            var clientConnectivity = _context.ClientDetails.ToList();
+            if (currClient == null)
+                return HttpNotFound();
 
-            return View(clientConnectivity);
+            return View(currClient);
+        }
+
+        public ActionResult New()
+        {
+            return View();
         }
     }
 }

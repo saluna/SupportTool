@@ -1,0 +1,38 @@
+﻿@model SupportTool.Models.ClientInfo.Clients
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Client</h2>
+
+@using (Html.BeginForm("Create", "Clients"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ClientID)
+        @Html.TextBoxFor(m => m.ClientID, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ClientName)
+        @Html.TextBoxFor(m => m.ClientName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ClientVersion)
+        @Html.TextBoxFor(m => m.ClientVersion, new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Hosted) Hosted?
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.PGo) PGo?
+        </label>
+    </div>
+
+}
+
+
+

@@ -9,7 +9,7 @@
 }
 
 <h2>List of Clients</h2>
-
+<br/>
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -20,7 +20,7 @@
         @foreach (var AllClients in Model)
         {
             <tr>
-                <td>@Html.ActionLink(AllClients.ClientName, "Index", "Clients", new { id = AllClients.ClientID}, null)</td>
+                <td>@Html.ActionLink(AllClients.ClientName, "Details", "Clients", new { id = AllClients.ClientID}, null)</td>
             </tr>
 
         }

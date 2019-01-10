@@ -153,12 +153,29 @@
     <Compile Include="Migrations\201901101912383_updateColumnName.Designer.cs">
       <DependentUpon>201901101912383_updateColumnName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901102022009_removingFKs.cs" />
+    <Compile Include="Migrations\201901102022009_removingFKs.Designer.cs">
+      <DependentUpon>201901102022009_removingFKs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901102210274_editClientDetails.cs" />
+    <Compile Include="Migrations\201901102210274_editClientDetails.Designer.cs">
+      <DependentUpon>201901102210274_editClientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901102215028_changeColumnTypes.cs" />
+    <Compile Include="Migrations\201901102215028_changeColumnTypes.Designer.cs">
+      <DependentUpon>201901102215028_changeColumnTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901102216133_changeColumnTypesClientDetails.cs" />
+    <Compile Include="Migrations\201901102216133_changeColumnTypesClientDetails.Designer.cs">
+      <DependentUpon>201901102216133_changeColumnTypesClientDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClientInfo\ClientDetails.cs" />
     <Compile Include="Models\ClientInfo\Clients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-simplex.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -199,6 +216,7 @@
     <Content Include="Views\Clients\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Clients\Details.cshtml" />
+    <Content Include="Views\Clients\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -228,6 +246,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101912383_updateColumnName.resx">
       <DependentUpon>201901101912383_updateColumnName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102022009_removingFKs.resx">
+      <DependentUpon>201901102022009_removingFKs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102210274_editClientDetails.resx">
+      <DependentUpon>201901102210274_editClientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102215028_changeColumnTypes.resx">
+      <DependentUpon>201901102215028_changeColumnTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102216133_changeColumnTypesClientDetails.resx">
+      <DependentUpon>201901102216133_changeColumnTypesClientDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
